@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: dim_produtos
+    description: Dimensão de produtos da Northwind
+    columns:
+      - name: pk_produto
+        description: Chave primaria
+        tests:
+          - unique
+          - not_null
+      - name: fk_fornecedor
+      - name: nm_produto
+      - name: nome_categoria
+        tests:
+          - not_null:
+              config:
+                severity: warn
+      - name: quantidade_por_unidade
+      - name: preco_por_unidade
+      - name: unidade_em_estoque
+      - name: unidade_por_pedido
+      - name: nivel_de_pedido
+      - name: eh_descontinuado
+        tests:
+          - not_null
+              
