@@ -2,6 +2,7 @@ with
     rennamed as (
         select 
             cast(id as int) as pk_funcionario
+            , cast(reportsto as varchar) as fk_gerente
             , cast(firstname as varchar) || ' ' || cast(firstname as varchar) as nome_funcionario
             , cast(title as varchar) as funcao_funcionario
             , cast(birthdate as date) as dt_nascimento
@@ -11,4 +12,5 @@ with
         from {{ source('erp', 'EMPLOYEE') }}
     )
 
-select * from rennamed
+select * 
+from rennamed
