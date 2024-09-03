@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: erp
+    description: 'ERP source of Northwind'
+    database: FEA24_6
+    schema: RAW_NORTHWIND
+    tables:
+      - name: CATEGORY
+        description: 'Category table with product categories'
+      - name: CUSTOMER
+        description: 'Customer table with client details'
+      - name: EMPLOYEE
+        description: 'Employee table with employee details'
+      - name: EMPLOYEETERRITORY
+        description: 'Table mapping employees to territories'
+      - name: ORDERDETAIL
+        description: 'Details of customer orders'
+      - name: PRODUCT
+        description: 'Product information'
+      - name: REGION
+        description: 'Geographical regions'
+      - name: SHIPPER
+        description: 'Shipping companies'
+      - name: SUPPLIER
+        description: 'Suppliers of products'
+      - name: TERRITORY
+        description: 'Territories where business operates'
+      - name: _ORDER_
+        description: 'Order table'

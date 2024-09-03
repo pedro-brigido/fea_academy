@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: dim_funcionarios
+    description: Dimensão de funcionarios da Northwind
+    columns:
+      - name: pk_funcionario
+        description: Chave primaria
+        tests:
+          - unique
+          - not_null
+      - name: NOME_GERENTE
+      - name: FUNCAO_FUNCIONARIO
+      - name: DT_NASCIMENTO
+      - name: DT_CONTRATACAO
+      - name: CIDADE_FUNCIONARIO
+      - name: PAIS_FUNCIONARIO
+              
