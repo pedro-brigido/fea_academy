@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_erp__produtos
+    description: Dimensao de produtos
+    columns:
+      - name: eh_descontinuado
+        description: Flag que indica se o produto ainda é comercializado
+        tests:
+          - not_null
+              
