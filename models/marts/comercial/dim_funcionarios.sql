@@ -7,7 +7,8 @@ with
     , joined as (
         select
             funcionarios.pk_funcionario
-            , funcionarios.nome_funcionario as nome_gerente
+            , funcionarios.nome_funcionario
+            , gerentes.nome_funcionario as nome_gerente
             , funcionarios.funcao_funcionario
             , funcionarios.dt_nascimento
             , funcionarios.dt_contratacao
