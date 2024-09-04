@@ -6,7 +6,7 @@ with
             , cast(city as varchar) as cidade_cliente
             , cast(region as varchar) as regiao_cliente
             , cast(country as varchar) as pais_cliente
-        from {{ source('erp', 'customer') }}
+        from {{ source('erp', 'CUSTOMER') }}
     )
 
 select *

@@ -3,7 +3,7 @@ with
         select 
             cast(id as int) as pk_transportadora
             , cast(companyname as varchar) as nm_transportadora
-        from {{ source('erp', 'shipper') }}
+        from {{ source('erp', 'SHIPPER') }}
     )
 
 select *
