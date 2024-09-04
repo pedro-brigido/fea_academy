@@ -9,6 +9,21 @@ with
         from {{ ref('dim_funcionarios') }}
     )
 
+    , dim_clientes as (
+        select *
+        from {{ ref('dim_clientes') }}
+    )
+
+    , dim_fornecedores as (
+        select *
+        from {{ ref('dim_fornecedores') }}
+    )
+
+    , dim_transportadoras as (
+        select *
+        from {{ ref('dim_transportadoras') }}
+    )
+
     , int_vendas as (
         select * 
         from {{ ref('int_comercial__detalhamento_ordens') }} 
@@ -16,7 +31,7 @@ with
 
     , joined as (
         select
-            sk_vendas
+            int_vendas.sk_vendas
             , int_vendas.fk_produto
             , int_vendas.fk_funcionario
             , int_vendas.fk_cliente
