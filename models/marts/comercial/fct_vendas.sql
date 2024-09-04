@@ -38,9 +38,16 @@ with
             , int_vendas.cidade_destinatario
             , int_vendas.regiao_destinatario
             , int_vendas.pais_destinatario
+            , dim_produtos.nm_produto
+            , dim_produtos.nome_categoria
+            , dim_funcionarios.nome_funcionario
+            , dim_funcionarios.nome_gerente
         from int_vendas
         left join dim_produtos
-        on int_vendas.fk_produto = dim_produtos.pk_produto 
+            on int_vendas.fk_produto = dim_produtos.pk_produto
+        left join dim_funcionarios
+            on int_vendas.fk_funcionario = dim_funcionarios.pk_funcionario
     )
+
 select *
 from joined
